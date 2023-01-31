@@ -1,0 +1,18 @@
+html, body {
+    height: 99%;
+    width: 99%;
+}
+
+#left-side {
+    position: fixed;
+    float: left;
+    padding-left: 1%;
+    width: 14%;
+    height: 100%;
+    background: linear-gradient(0deg, rgb(250, 226, 190) 0%, rgb(151, 126, 96) 35%, rgba(135, 88, 10) 100%);
+    border: 0.2rem solid black;
+}
+
+#right-side {
+    margin-left: 12rem;
+}

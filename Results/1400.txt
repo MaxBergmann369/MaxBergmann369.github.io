@@ -1,0 +1,5 @@
+1. ... Dxf2
+2. Kh1 Lf3
+3. Sxf3 Dxf3
+4. Kh2 Dh5
+5. Kg2 Dxh6

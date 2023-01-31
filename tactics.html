@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>Train Tactics</title>
+        <link rel="stylesheet" href="tactics.css">
+        <link rel="stylesheet" href="box.css">
+       
+    </header>
+    <body style="background-color:#42413D;">
+        <div id="left-side">
+            <div class="hold">
+                <h2>Train Tactics</h2>
+                <b>Enter a Elonumber:</b>
+                <input type="number" maxlength = "4" name="Enter Elo" min="800" max="2600" step="100" oninput="maxLengthCheck(this)" id="elo">
+                <button class="subButton" onclick="getTacticImg()">Submit</button>
+                <br>
+                <br>
+                <div class="center">
+                    <button class="result-btn" onclick="getTacticText()">Ergebnis</button>
+                </div>
+
+                <object id="text" data="" width="300" height="200"></object>
+
+                <div class="bottom">
+                    <a class="back-btn" href="index.html"><span> ← Zurück </span></a>
+                </div>
+            </div>
+        </div>
+        
+        <img class="img-size" id="id1" onload="javascript:showImage();">
+        
+        <script>
+            function maxLengthCheck(object)
+            {
+                object.value = object.value.slice(0, object.maxLength)
+
+                if(object.value > 2600) {
+                    object.value = 2600
+                }
+            }
+
+            function getTacticImg() {
+                object = document.getElementById('elo');
+                var val = Math.floor(object.value/100) *100;
+                
+                var image = new Image();
+                image.onload = function () {
+                    document.getElementById('id1').setAttribute('src', this.src);
+                };
+
+                switch(val) {
+                    case 800:
+                        image.src = 'src/800.png';
+                        break
+                    case 900:
+                        image.src = 'src/900.png';
+                        break
+                    case 1000:
+                        image.src = 'src/1000.png';
+                        break
+                    case 1100:
+                        image.src = 'src/1100.png';
+                        break
+                    case 1200:
+                        image.src = 'src/1200.png';
+                        break
+                    case 1300:
+                        image.src = 'src/1300.png';
+                        break
+                    case 1400:
+                        image.src = 'src/1400.png';
+                        break
+                    case 1500:
+                        image.src = 'src/1500.png';
+                        break
+                    case 1600:
+                        image.src = 'src/1600.png';
+                        break
+                    case 1700:
+                        image.src = 'src/1700.png';
+                        break
+                    case 1800:
+                        image.src = 'src/11.png';
+                        break
+                    case 1900:
+                        image.src = 'src/12.png';
+                        break
+                    case 2000:
+                        image.src = 'src/13.png';
+                        break
+                    case 2100:
+                        image.src = 'src/14.png';
+                        break
+                    case 2200:
+                        image.src = 'src/15.png';
+                        break
+                    case 2300:
+                        image.src = 'src/16.png';
+                        break
+                    case 2500:
+                        image.src = 'src/17.png';
+                        break
+                    case 2600:
+                        image.src = 'src/18.png';
+                        break
+                }
+            }
+
+            function getTacticText()
+            {
+                object = document.getElementById('elo');
+                var val = Math.floor(object.value/100) *100;
+
+                text = document.getElementById('text');
+
+                switch(val) {
+                    case 800:
+                        text.data = 'Results/800.txt';
+                        break
+                    case 900:
+                        text.data = 'Results/900.txt';
+                        break
+                    case 1000:
+                        text.data = 'Results/1000.txt';
+                        break
+                    case 1100:
+                        text.data = 'Results/1100.txt';
+                        break
+                    case 1200:
+                        text.data = 'Results/1200.txt';
+                        break
+                    case 1300:
+                        text.data = 'Results/1300.txt';
+                        break
+                    case 1400:
+                        text.data = 'Results/1400.txt';
+                        break
+                    case 1500:
+                        text.data = 'Results/1500.txt';
+                        break
+                    case 1600:
+                        text.data = 'Results/1600.txt';
+                        break
+                    case 1700:
+                        text.data = 'Results/1700.txt';
+                        break
+                    case 1800:
+                        break
+                    case 1900:
+                        break
+                    case 2000:
+                        break
+                    case 2100:
+                        break
+                    case 2200:
+                        break
+                    case 2300:
+                        break
+                    case 2500:
+                        break
+                    case 2600:
+                        break
+                }
+            }
+          </script>
+    </body>
+</html>
